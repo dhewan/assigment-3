@@ -212,7 +212,7 @@ it("Should get all photo 200", (done) => {
   })
 })
 
-it("Should get all photo 500", (done) => {
+it("Should get all photo response 500 without auth", (done) => {
 
   request(app)
   .get("/all-photo")
@@ -297,7 +297,7 @@ it("Should get all photo 500", (done) => {
 
   let photoId=null 
 
-  it("Should get photo by id 200", (done) => {
+  it("Should get photo by id with response 200", (done) => {
     const payload = jwt.verifyToken(auth)
 
     request(app)
@@ -328,7 +328,7 @@ it("Should get all photo 500", (done) => {
   }
 
 
-  it("Should get photo by id 404", (done) => {
+  it("Should get photo by id with response 404", (done) => {
     const payload = jwt.verifyToken(auth)
 
     request(app)
