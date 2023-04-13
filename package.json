@@ -4,7 +4,9 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "test": "npx jest --detectOpenHandles --forceExit"
+    "test": "npx jest --detectOpenHandles --forceExit",
+    "db:create:test": "npx sequelize db:create",
+    "db:migrate:test": "npx sequelize db:migrate"
   },
   "dependencies": {
     "bcrypt": "^5.1.0",
